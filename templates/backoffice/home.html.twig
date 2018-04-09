@@ -1,0 +1,12 @@
+{# templates/backoffice/home.html.twig #}
+{% extends 'base.back.html.twig' %}
+
+{% block title %}
+    {{title.label}}
+{% endblock %}
+
+{% block body %}
+    {{title.label}}
+    {{parent()}}
+    Back-Office
+{% endblock %}

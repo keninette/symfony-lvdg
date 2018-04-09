@@ -1,0 +1,19 @@
+{
+    "devDependencies": {
+        "@symfony/webpack-encore": "^0.17.0",
+        "grunt": "^1.0.2",
+        "grunt-contrib-sass": "^1.0.0",
+        "grunt-contrib-uglify": "^3.3.0",
+        "grunt-contrib-watch": "^1.0.0",
+        "load-grunt-tasks": "^3.5.2",
+        "ruby": "^0.6.1"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production"
+    }
+}
