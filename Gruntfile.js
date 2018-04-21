@@ -10,8 +10,8 @@ module.exports = function(grunt) {
 
       // global paths
         , paths: {
-            resources:    'public/'   // source files
-            , assets:     'assets/'   // compiled or processed files
+            resources:    'assets/'   // source files
+            , assets:     'public/'   // compiled or processed files
         }
 
         , uglify: {
@@ -29,7 +29,8 @@ module.exports = function(grunt) {
             // For development
             dev: {
               files: {
-                '<%= paths.assets %>css/home.css' : '<%= paths.resources %>sass/home.scss'
+                '<%= paths.assets %>css/home.back.css' :    '<%= paths.resources %>sass/home.back.scss',
+                '<%= paths.assets %>css/main.css' :         '<%= paths.resources %>sass/main.scss'
               }
               , options: {
                 style: 'expanded'
