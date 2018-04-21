@@ -8,7 +8,14 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}Hello world! Welcome to {{title.label}}{% endblock %}
+        <nav>
+            <ul>
+                <li><a href="">Titleator</a></li>
+            </ul>    
+        </nav>
+        {% block body %}
+            Hello world! Welcome to {{title.label}}
+        {% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>

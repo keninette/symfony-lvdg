@@ -4,14 +4,16 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use App\Service\RandomTitleGenerator;
+use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Back-Office homepage controller
- *
- * @author kbj
+ * @route("/admin", name="bo_")
  */
 class BackOfficeController extends Controller {
 
+    /**
+     * @route("/", name="home")
+     */
     public function home(RandomTitleGenerator $rtg) {
         $title = $rtg->generateRandomTitle();
         
