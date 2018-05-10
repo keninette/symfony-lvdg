@@ -10,9 +10,14 @@
     <body>
         <nav>
             <ul>
-                <li><a href="">Titleator</a></li>
+                <li><a href="{{ path('bo_titleator') }}">Titleator</a></li>
             </ul>    
         </nav>
+        <div>
+            {% for info in app.flashes %}
+            <p>{{ info }}</p>
+            {% endfor %}
+        </div>
         {% block body %}
             Hello world! Welcome to {{title.label}}
         {% endblock %}

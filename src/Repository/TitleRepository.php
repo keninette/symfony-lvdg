@@ -15,28 +15,24 @@ class TitleRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Title::class);
     }
-    /*
-    public function findBySomething($value)
-    {
-        return $this->createQueryBuilder('t')
-            ->where('t.something = :value')->setParameter('value', $value)
-            ->orderBy('t.id', 'ASC')
-            ->setMaxResults(10)
+
+    public function findSubmitted() {
+        $qb = $this
+            ->createQueryBuilder('t')
+            ->where('t.submittedBy IS NOT NULL')
             ->getQuery()
-            ->getResult()
         ;
+
+        return $qb->execute();
     }
-    */
    
-   public function findMax() :int {
-        $lastId  = 0;
+    public function findMaxId() :int {
        
-        return $this   ->createQueryBuilder('t')
+        return $this
+                ->createQueryBuilder('t')
                 ->select('MAX(t.id)')
                 ->getQuery()
-                ->getSingleScalarResult();
-               
-       
-       //return $lastId;
+                ->getSingleScalarResult()
+                ;
    }
 }

@@ -1,0 +1,14 @@
+{# templates/backoffice/titleator.html.twig #}
+{% extends 'base.back.html.twig' %}
+
+{% block title %}
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    Titleator
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock %}

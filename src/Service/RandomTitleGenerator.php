@@ -26,7 +26,7 @@ class RandomTitleGenerator {
      * Randomly picks a title from database
      */
     public function generateRandomTitle() :Title {
-        $lastTitleId    = $this->emi->getRepository(Title::class)->findMax();
+        $lastTitleId    = $this->emi->getRepository(Title::class)->findMaxId();
         
         return $this->emi ->getRepository(Title::class)
                             ->findOneBy(['id' => rand(1, $lastTitleId)]);
